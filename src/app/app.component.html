@@ -1,9 +1,1 @@
-<div *ngIf="randomQuote != null">
-  <h1>{{ randomQuote.text }}</h1>
-  <h1>{{ randomQuote.author }}</h1>
-  <h1>{{ randomQuote.tag }}</h1>
-</div>
-<button mat-raised-button color="primary" (click)="onGenerateRandomQuote()">New Quote</button>
-<button mat-icon-button color="warn" aria-label="Mark quote as favorites" (click)="onAddFavorites()">
-  <mat-icon>favorite</mat-icon>
-</button>
+<router-outlet></router-outlet>

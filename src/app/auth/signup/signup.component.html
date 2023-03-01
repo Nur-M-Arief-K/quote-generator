@@ -1,0 +1,43 @@
+<div
+  class="border rounded py-3 shadow-sm col-10 col-sm-8 col-md-6 col-xl-4 mx-auto"
+>
+  <form
+    class="d-flex flex-column w-75 mx-auto"
+    [formGroup]="signupForm"
+    (click)="onSignup()"
+  >
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" name="email" />
+      <mat-error>Please input valid email format</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        name="password"
+      />
+      <mat-error>Password should have 8 characters or more</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Confirm Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="confirmPassword"
+        name="confirmPassword"
+      />
+      <mat-error>Confirm Password doesn't match</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      class="w-25 ms-auto"
+      type="submit"
+      color="primary"
+    >
+      Sign up
+    </button>
+  </form>
+</div>
